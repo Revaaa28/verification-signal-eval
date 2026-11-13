@@ -1,0 +1,85 @@
+{
+ "summary": {
+  "gemini-3.5-flash-lite": [
+   {
+    "pass": 1,
+    "A": {
+     "correct": 1,
+     "abstain": 6,
+     "invalid": 0,
+     "falseFree": 1
+    },
+    "B": {
+     "correct": 5,
+     "abstain": 3,
+     "invalid": 0,
+     "falseFree": 0
+    }
+   },
+   {
+    "pass": 2,
+    "A": {
+     "correct": 1,
+     "abstain": 6,
+     "invalid": 0,
+     "falseFree": 1
+    },
+    "B": {
+     "correct": 8,
+     "abstain": 0,
+     "invalid": 0,
+     "falseFree": 0
+    }
+   }
+  ],
+  "gemma-4-31b-it": [
+   {
+    "pass": 1,
+    "A": {
+     "correct": 0,
+     "abstain": 5,
+     "invalid": 0,
+     "falseFree": 3
+    },
+    "B": {
+     "correct": 4,
+     "abstain": 0,
+     "invalid": 3,
+     "falseFree": 1
+    }
+   }
+  ],
+  "gemini-3.6-flash": [
+   {
+    "pass": 1,
+    "A": {
+     "correct": 0,
+     "abstain": 8,
+     "invalid": 0,
+     "falseFree": 0
+    },
+    "B": {
+     "correct": 6,
+     "abstain": 0,
+     "invalid": 1,
+     "falseFree": 1
+    }
+   }
+  ]
+ },
+ "aggregate": {
+  "A": {
+   "correct": 1,
+   "abstain": 19,
+   "falseFree": 4,
+   "invalid": 0
+  },
+  "B": {
+   "correct": 18,
+   "abstain": 0,
+   "falseFree": 2,
+   "invalid": 4
+  },
+  "models": 3
+ }
+}
