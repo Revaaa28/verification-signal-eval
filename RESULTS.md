@@ -32,6 +32,25 @@ models: **agentic-coin**, where minting requires a 0.002 BNB deposit locked for
 as "effectively free" and answer MINT. The verification signal fixes ignorance;
 it does not fix a model's willingness to treat a refundable lockup as no cost.
 
+## Cross-family replication (OpenRouter panel, added 2026-11-13 afternoon)
+
+Same frozen cases, same prompts, same scoring — three non-Google model
+families served via OpenRouter free tier:
+
+| Model | A acc | B acc | A abstain | B abstain | B false-free | B invalid |
+|---|---|---|---|---|---|---|
+| nvidia/nemotron-3-ultra-550b-a55b:free | 0/8 | 6/8 | 8 | 2 | 0 | 0 |
+| cohere/north-mini-code:free | 1/8 | 6/8 | 7 | 1 | 1 | 0 |
+| baidu/ernie-5.5-flash-preview:free | 0/8 | 7/8 | 8 | 0 | 0 | 1 |
+
+Panel totals: A **1/24 (4%)**, abstentions 23/24 (96%); B **19/24 (79%)**,
+abstentions 3/24. Combined with the Google panel (6 models, 48 cells per
+condition): **A 2/48 (4%) vs B 37/48 (77%)** — the effect is not a
+Google-model artifact; it replicates across NVIDIA, Cohere and Baidu model
+families. The residual failure mode also replicates: the panel's only
+B-condition false-"free" error is again **agentic-coin** (Cohere) — the
+refundable-deposit trap.
+
 ## Failed runs (recorded honestly)
 
 - `gemini-2.5-flash` and `gemini-2.5-flash-lite` returned HTTP 404 from the
